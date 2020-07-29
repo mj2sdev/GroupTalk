@@ -1,0 +1,29 @@
+doctype html
+html
+    head
+        title LOGIN
+        meta(chatset="utf-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css")
+        link(rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons")
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js")
+        script(src="https://code.jquery.com/jquery-3.5.1.slim.js")
+        script(src="/javascript/index.js")
+        script(src="/socket.io/socket.io.js")
+        link(rel="stylesheet" href="/css/index.css")
+    body
+        div.container
+            form.card(action="/login" method="POST")
+                div.login-background.center.blue-grey
+                    i.material-icons.large.white-text person
+                div.card-content
+                    span.card-title.blue-grey-text LOGIN
+                    div.input-field
+                        input#nickname(autocomplete="off" name="nickname" type="text")
+                        label(for="nickname") Nickname
+                    div.input-field.tooltipped(data-position="right" data-tooltip="준비 중입니다." )
+                        input#password(name="password" type="password" disabled)
+                        label(for="password") Password
+                    button.btn.blue-grey 로그인
+
+        

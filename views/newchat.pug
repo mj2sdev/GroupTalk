@@ -1,0 +1,67 @@
+doctype html
+html
+    head
+        title LOGIN
+        meta(chatset="utf-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css")
+        link(rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons")
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js")
+        script(src="https://code.jquery.com/jquery-3.5.1.slim.js")
+        script(src="/javascript/newchat.js")
+        script(src="/socket.io/socket.io.js")
+        link(rel="stylesheet" href="/css/newchat.css")
+    body
+        div.container
+            div.row
+                div.col.s12.m6.card.blue-grey
+                    div.preview
+                        //- each val in [1, 2, 3, 4, 5, 6, 7, 8]
+                        //-     div.face
+                        //-         i.material-icons.white.tooltipped(data-position="top" data-tooltip="...") person
+                        //-         div.white-text 홍길동김길동
+                        
+                div.col.s12.m6.card
+                    div.view
+                        //- div.information.center 
+                        //-     span 누군가가 입장했습니다.
+                        //- div.someone
+                        //-     div.profile
+                        //-         i.material-icons.small.blue-grey.white-text person
+                        //-     div.content
+                        //-         div#name 보낸이
+                        //-         div#date.blue-grey-text 2020-06-10
+                        //-         div#message 테스트 메시지 입니다. 테스트 메시지 입니다. 테스트 메시지 입니다. 테스트 메시지 입니다. 테스트 메시지 입니다. 테스트 메시지 입니다.
+                        //- div.myself
+                        //-     div.profile
+                        //-         i.material-icons.small.blue-grey.white-text person
+                        //-     div.content
+                        //-         div#name 보낸이
+                        //-         div#date.blue-grey-text 2020-06-10
+                        //-         div#message 테스트 메시지 입니다. 테스트 메시지 입니다. 테스트 메시지 입니다.
+                        //- div.myself
+                        //-     div.profile
+                        //-         i.material-icons.small.blue-grey.white-text person
+                        //-     div.content
+                        //-         div#name 보낸이
+                        //-         div#date.blue-grey-text 2020-06-10
+                        //-         div#message 테스트 메시지 입니다. 테스트 메시지 입니다. 테스트 메시지 입니다.
+                        //- div.information.center 
+                        //-     span 누군가가 입장했습니다.
+                        //- div.someone
+                        //-     div.profile
+                        //-         i.material-icons.small.blue-grey.white-text person
+                        //-     div.content
+                        //-         div#name 보낸이
+                        //-         div#date.blue-grey-text 2020-06-10
+                        //-         div#message 테스트 메시지 입니다. 테스트 메시지 입니다. 테스트 메시지 입니다. 테스트 메시지 입니다. 테스트 메시지 입니다. 테스트 메시지 입니다.
+                        
+                            
+                                
+                    form#send-field.input-field
+                        button#send.btn.blue-grey.right.tooltipped(data-position="top" data-tooltip="보내기")
+                            i.material-icons.medium send
+                        input#input(autocomplete="off" placeholder="Message")
+                        
+
+        

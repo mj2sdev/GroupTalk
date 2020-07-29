@@ -1,0 +1,33 @@
+doctype html
+html
+    head
+        title chat
+        meta(chatset='utf-8')
+        meta(name='description' content='chat web test')
+        meta(name='keywords' content='HTML,CSS,Javascript')
+        meta(name='author' content='mj2')
+        meta(name='viewport' content='width=device-width, initial-scale=1.0')
+        link(rel='stylesheet' href='/css/Chat.css')
+        link(rel='stylesheet' href='/css/openSource.css')
+        link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css")
+        script(src='/socket.io/socket.io.js')
+        script(src='/javascript/Chat.js')
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js")
+    body
+        header
+            h3 Ezen Talk
+        div.contain
+            textarea#view(readonly)
+            //- div#view2
+            //-     div.box
+            //-         h5.name username
+            //-         p.content Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem accusantium asperiores repellendus neque velit accusamus delectus minus sint veniam ipsum provident et, atque dolorem harum doloribus alias natus similique. Beatae!
+            form#form
+                div.input-field
+                    input#message(type='text' autocomplete='off')
+                    label(for='message') Message
+                    button#send.btn.waves-effect.waves-light(type='submit') 보내기
+        div#list [접속자]
+            div#member
+        footer
+            p#copyright Copyright 2020. mj2 all rights reserved.

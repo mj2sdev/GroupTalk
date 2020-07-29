@@ -1,0 +1,149 @@
+html, body {
+    height: 100%;
+}
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.view {
+    display: flex;
+    flex-direction: column;
+    height: 30rem;
+    overflow-y: scroll;
+    border-bottom: 1px solid #ddd;
+    margin: 1rem 0;
+}
+.information {
+    border-bottom: 1px solid #ddd;
+    line-height: 0.1rem;
+    margin: 1rem 0;
+    color: #aaa;
+}
+.information span {
+    background: #fff;
+    padding: 0 0.5rem;
+}
+.someone {
+    display: flex;
+    flex-direction: row;
+    max-width: 75%;
+    margin: 0.25rem 0;
+}
+.profile i {
+    border-radius: 100%;
+    padding: 0.25rem;
+    margin: 0.5rem;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+}
+#name {
+    float: left;
+}
+#date {
+    text-align: right;
+    font-size: 0.75rem;
+    margin-top: 0.5rem;
+    padding: 0 0.5rem;
+}
+#message {
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+    background: white;
+    padding: 0.5rem;
+    border-radius: 0 1rem 1rem 1rem;
+    color: #777777;
+    word-break:break-all;
+}
+.myself {
+    align-self: flex-end;
+    display: flex;
+    flex-direction:row-reverse;
+    max-width: 75%;
+    margin: 0.25rem 0;
+}
+.myself #name {
+    float: right;
+}
+.myself #date {
+    text-align: left;
+}
+.myself #message{
+    border-radius: 1rem 0 1rem 1rem;
+}
+#send-field {
+    display: flex;
+    width: 100%;
+}
+#send-field button {
+    position: absolute;
+    border-radius: 100%;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 0;
+}
+#input {
+    border-radius: 3rem;
+    background: #fafafa;
+    padding: 0 4rem 0 1rem;
+    border: none;
+}
+#input:focus {
+    box-shadow: 0px 0px 2px 2px #ddd;
+    transition: box-shadow .3s, border .3s, -webkit-box-shadow .3s;
+}
+.preview {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: wrap;
+    height: 36.5rem;
+}
+.face {
+    margin: 4rem 2rem 0rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.face i {
+    font-size: 3rem !important;
+    padding: 0.25rem;
+    border-radius: 100%;
+}
+@media screen and (min-width: 600px) {
+    /* desktop */
+    .preview i {
+        
+    }
+}
+@media screen and (max-width: 599px) {
+    /* mobile */
+    body {
+        display: block;
+    }
+    .face {
+        margin: 2rem;
+    }
+    .preview i {
+        font-size: 2rem !important;
+    }
+}
+
+
+
+/* Scroll Design */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 3px;
+  background-color: #ddd;
+}
+::-webkit-scrollbar-button {
+  width: 0;
+  height: 0;
+}
