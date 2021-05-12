@@ -3,10 +3,18 @@ const session = require('express-session');
 const app = express();
 const bodyParser = require('body-parser');
 const e = require('express');
-const http = require('http').Server(app);
+const npm = require('http').Server(app);
 // const io = require('./my_modules/socket.js')(http);
 const io = require('socket.io')(http);
 const sessionMiddleware = session({ secret: 'keyboard cat', cookie: { maxAge: 60000 }});
+const PORT = process.env.PORT || 443;
+const https = require('https');
+const fs = require('fs');
+
+const option = {
+  cert: fs.readFileSync('ssl/certificate.crt'),
+  key: fs.readFileSync('ssl/private.key'),
+}
 
 app.use(sessionMiddleware);
 app.set('view engine', 'pug');
@@ -70,3 +78,6 @@ app.get('/*', (req, res) => res.render('PageNotFound'));
 
 // server on
 http.listen(3000, () => console.log('server on...'));
+https.createServer(option, app).listen(443, () => {
+  console.log('HTTPS Server Started');
+})
