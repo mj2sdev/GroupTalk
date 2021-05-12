@@ -9,7 +9,7 @@
     "express-session": "^1.17.1",
     "fs": "^0.0.1-security",
     "moment": "^2.24.0",
-    "pug": "^2.0.4",
+    "pug": "^3.0.1",
     "socket.io": "^2.3.0"
   },
   "devDependencies": {},
