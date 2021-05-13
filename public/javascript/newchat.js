@@ -15,7 +15,7 @@ $(document).ready( init => {
             if (Notification.permission == 'default') {
                 Notification.requestPermission();
             } else if (Notification.permission == 'granted') {
-                let notification = new Notification('누군가가 말하기를', { body: message.content });
+                let notification = new Notification(message.name, { body: message.content });
                 setTimeout(notification.close.bind(notification), 4000);
             }
         }
