@@ -14,7 +14,7 @@ $(document).ready( init => {
             $(".view")[0].innerHTML += `<div class="someone"><div class="profile"><i class="material-icons small blue-grey white-text">person</i></div><div class="content"><div id="name">${message.name}</div><div class="blue-grey-text" id="date">${new Date().getHours()}:${new Date().getMinutes()}</div><div id="message">${message.content}</div></div></div>`;
             if (Notification.permission == 'default') {
                 Notification.requestPermission();
-            } else if (Notification.permission == 'granted') {
+            } else if (Notification.permission == 'granted' && !document.hasFocus()) {
                 let notification = new Notification(message.name, { body: message.content });
                 setTimeout(notification.close.bind(notification), 4000);
             }
