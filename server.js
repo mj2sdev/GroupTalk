@@ -77,6 +77,6 @@ io.on('connection', (socket) => {
 app.get('/*', (req, res) => res.render('PageNotFound'));
 
 // server on
-server.listen(443, () => {
-    console.log('server on port 443');
+server.listen(3000, () => {
+    console.log('server on port 3000');
 });
